@@ -1,0 +1,48 @@
+// 禁止选中文字
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+// 不显示scrollbar
+::-webkit-scrollbar {
+  display: none;
+}
+
+html, #app, .app-main {
+  height: 100%;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  background-color: #000000;
+}
+
+// 抽离的样式
+@import './mixin.less'; // less mixin
+
+// 常用mixin预设样式，一般用u-xxx
+.u-clearfix {
+  .clearfix();
+}
+.u-left {
+  .pull-left();
+}
+.u-right {
+  .pull-right();
+}
+.u-ellipsis {
+  .ellipsis();
+}
+.u-ellipsis-2 {
+  .multiEllipsis(2);
+}
+.u-ellipsis-3 {
+  .multiEllipsis(3);
+}
+.u-boxshadow {
+  .boxShadow();
+}
